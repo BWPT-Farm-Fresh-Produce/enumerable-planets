@@ -9,6 +9,24 @@
 </head>
 <body>
 <h1>Pick a planet:</h1>
-
+<!--<ul>-->
+<!--    <th:block th:each="planet : ${planets}">-->
+<!--        <li th:text="${planet.getName()}"></li>-->
+<!--    </th:block>-->
+<!--</ul>-->
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <td scope="col">Planet Name</td>
+            <td score="col">Days in year</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="planet : ${planets}">
+            <td th:text="${planet.getName}"></td>
+            <td th:text="${planet.getYearLength}"></td>
+        </tr>
+    </tbody>
+</table>
 </body>
 </html>
